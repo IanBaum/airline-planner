@@ -5,10 +5,10 @@
         private $id;
         private $name;
 
-        function __construct($city_id = null, $city_name)
+        function __construct($city_name, $city_id = null)
         {
-            $this->id = $city_id;
             $this->name = $city_name;
+            $this->id = $city_id;
         }
 
         function getId()
@@ -38,9 +38,9 @@
             $cities = [];
             foreach($returned_cities as $city)
             {
-                $name = $city['name'];
                 $id = $city['id'];
-                $new_city = new City($id, $name);
+                $name = $city['name'];
+                $new_city = new City($name, $id);
                 array_push($cities, $new_city);
             }
             return $cities;
