@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Flights from {{ city.getName }}</title>
+    </head>
+    <body>
+        <h1>View and Add Flights from {{ city.getName }}</h1>
+
+        {% foreach flight in city.getId %}
+
+        {% endfor %}
+
+
+        <form action="/add_flight" method="post">
+            <div class="form-group">
+                -origin city.getName
+                -destination
+                -departure time
+                -arrival time
+            </div>
+        </form>
+
+    </body>
+</html>

@@ -11,7 +11,7 @@
 
             <form action="/departure_city_select" method="get">
                 <div class="form-group">
-                  <label for="departure_city_select">Select Departure City</label>
+                  <label for="departure_city_select">1. Select Departure City</label>
                   <select class="form-control" id="departure_city_select" name="departure_city_select">
 
                     {% for city in cities %}
@@ -24,12 +24,14 @@
             <p>OR</p>
             <form action="/departure_city_add" method="post">
                 <div class="form-group">
-                    <label for="city-name">City Name</label>
+                    <label for="city-name">Add City Name</label>
                     <input class="form-control" id="city-name" name="city-name" type="text">
-                    <button type="submit" class="btn btn-default">Add Another City</button>
+                    <button type="submit" class="btn btn-success">Add</button>
                 </div>
             </form>
-            <p><a href='/'>Home</a></p>
+            <a href='/'><button class="btn btn-default">Home</button></a>
+            <a href="/delete_cities"><button class="btn btn-danger">Delete All</button></a>
+
 
 
         </div>

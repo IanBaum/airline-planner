@@ -23,6 +23,11 @@
         return $app["twig"]->render("index.html.twig", array("cities" => City::getAll()));
     });
 
+    $app->get("/delete_cities", function() use($app) {
+        City::deleteAll();
+        return $app["twig"]->render("index.html.twig");
+    });
+
     return $app;
 
 ?>
